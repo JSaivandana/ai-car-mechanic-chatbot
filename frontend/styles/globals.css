@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f2f4f7;
+  color: #1a1a1a;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 24px 12px;
+  min-height: 100vh;
+}
+
+.chat-shell {
+  width: 100%;
+  max-width: 640px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #eaeaea;
+  background: #0f3d3e;
+  color: white;
+}
+
+.chat-header h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.subtitle {
+  margin: 2px 0 0;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.chat-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bubble-row {
+  display: flex;
+}
+
+.bot-row {
+  justify-content: flex-start;
+}
+
+.user-row {
+  justify-content: flex-end;
+}
+
+.bubble {
+  max-width: 78%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  white-space: pre-wrap;
+}
+
+.bot-bubble {
+  background: #eef3f2;
+  border-bottom-left-radius: 2px;
+}
+
+.user-bubble {
+  background: #0f3d3e;
+  color: white;
+  border-bottom-right-radius: 2px;
+}
+
+.bubble-label {
+  display: block;
+  font-size: 10px;
+  opacity: 0.6;
+  margin-bottom: 2px;
+}
+
+.bubble p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.diagnosis-card {
+  border: 1px solid #d8e2e0;
+  background: #fbfdfc;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-top: 8px;
+}
+
+.diagnosis-card h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+}
+
+.diagnosis-card p {
+  font-size: 13px;
+  margin: 4px 0;
+}
+
+.urgency {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.urgency-low { background: #e3f5e1; color: #2d7a2d; }
+.urgency-medium { background: #fff3d6; color: #9a6b00; }
+.urgency-high { background: #ffe3d6; color: #b4460a; }
+.urgency-urgent { background: #ffd9d9; color: #b30000; }
+
+.booking-confirmed {
+  color: #2d7a2d;
+  font-weight: 600;
+}
+
+.chat-footer {
+  border-top: 1px solid #eaeaea;
+  padding: 12px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.media-upload-row {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  background: #f2f4f7;
+  border: 1px solid #dfe3e6;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.icon-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.uploading-note {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+.chat-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.chat-input-row input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #dfe3e6;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background: #0f3d3e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  color: inherit;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.error-banner {
+  background: #ffe3e3;
+  color: #a11;
+  font-size: 13px;
+  padding: 8px 16px;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal {
+  background: white;
+  border-radius: 10px;
+  padding: 20px 24px;
+  width: 90%;
+  max-width: 380px;
+}
+
+.modal h2 {
+  margin-top: 0;
+  font-size: 17px;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal label {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  gap: 4px;
+}
+
+.modal input,
+.modal textarea {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #dfe3e6;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.error-text {
+  color: #b30000;
+  font-size: 12px;
+  margin: 0;
+}
