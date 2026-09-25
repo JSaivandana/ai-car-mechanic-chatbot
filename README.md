@@ -1,8 +1,18 @@
 # AI Car Mechanic Chatbot
 
 A web-based chatbot where a car owner chats with a virtual mechanic agent for
-troubleshooting and diagnosis, built for the Full-Stack Developer Intern
-48-hour task.
+troubleshooting and diagnosis.
+
+## Live Links
+
+- **Frontend:** https://ai-car-mechanic-chatbot-8res.vercel.app
+- **Backend API:** https://ai-car-mechanic-chatbot-1.onrender.com/api
+
+> Note: the backend runs on Render's free tier, which spins down after ~15
+> minutes of inactivity. The first request after an idle period can take
+> 30-60 seconds to wake it back up — this is expected, not a bug. The free
+> tier also doesn't persist the SQLite file across restarts/redeploys, so
+> conversation/booking data created during a demo may be cleared afterward.
 
 **Stack (exactly as specified in the task):**
 - **Frontend:** React / Next.js — deploy on Vercel free tier
