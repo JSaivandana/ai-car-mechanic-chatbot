@@ -14,7 +14,7 @@ troubleshooting and diagnosis.
 > tier also doesn't persist the SQLite file across restarts/redeploys, so
 > conversation/booking data created during a demo may be cleared afterward.
 
-**Stack (exactly as specified in the task):**
+**Stack:**
 - **Frontend:** React / Next.js — deploy on Vercel free tier
 - **Backend:** Python + Django / Django REST Framework — deploy on AWS free tier
 - **Database:** SQLite
